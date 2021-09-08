@@ -1,0 +1,42 @@
+version: "3.7"
+
+services:
+  mongo:
+    container_name: "tla-mongo"
+    image: mongo
+    volumes:
+      - ./db-data:/data/db
+    ports:
+      - 27017:27017
+    restart: always
+    env_file:
+      - .development.env
+    networks:
+      - todo-list-app
+
+  mongo-express:
+    container_name: "tla-me"
+    image: mongo-express
+    ports:
+      - 8081:8081
+    restart: always
+    env_file:
+      - .development.env
+    networks:
+      - todo-list-app
+
+  backend:
+    container_name: "tla-backend"
+    build:
+      context: ./backend
+    volumes:
+      - ./backend:/srv/app
+    ports:
+      - 4000:4000
+    env_file:
+      - .development.env
+    networks:
+      - todo-list-app
+
+networks:
+  todo-list-app:

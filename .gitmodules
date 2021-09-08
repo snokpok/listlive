@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = git@github.com:snokpok/todo-list-app-backend.git
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:snokpok/todo-list-app-frontend.git
