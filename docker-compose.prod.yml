@@ -5,12 +5,12 @@ services:
     container_name: "tla-mongo"
     image: mongo
     volumes:
-      - ./db-data/dev:/data/db
+      - ./db-data/prod:/data/db
     ports:
       - 27017:27017
     restart: always
     env_file:
-      - .development.env
+      - .production.env
     networks:
       - todo-list-app
 
@@ -21,23 +21,31 @@ services:
       - 8081:8081
     restart: always
     env_file:
-      - .development.env
+      - .production.env
+    depends_on:
+      - mongo
     networks:
       - todo-list-app
 
   backend:
     container_name: "tla-backend"
-    build:
-      context: ./backend
-      dockerfile: dev.Dockerfile
-    volumes:
-      - ./backend:/srv/app
+    image: snakpy/listlive-backend:latest
     ports:
       - 4000:4000
     env_file:
-      - .development.env
+      - .production.env
+    depends_on:
+      - mongo
+      - mongo-express
     networks:
       - todo-list-app
+
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.docker/config.json:/config.json
+    command: --interval 30
 
 networks:
   todo-list-app:
