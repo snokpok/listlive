@@ -1,3 +1,5 @@
+DO_DROPLET_IPV4 = 159.89.229.218
+
 dev-up:
 	docker-compose -f docker-compose.dev.yml up -d
 
@@ -18,3 +20,10 @@ prod-down:
 prod-res:
 	make prod-down
 	make prod-up
+
+access-server:
+	ssh root@$(DO_DROPLET_IPV4)
+
+send-stage-files:
+	scp ./docker-compose.prod.yml root@$(DO_DROPLET_IPV4):~
+	scp ./.production.env root@$(DO_DROPLET_IPV4):~
