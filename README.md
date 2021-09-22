@@ -5,7 +5,7 @@ This is a MVP for an idea I had to make todo lists a more enjoyable process. Wit
 
 Check out a small demo here: https://youtu.be/F4UoORTmc5A
 
-### Technology:
+### Tech stack:
 - Python (FastAPI)
 - MongoDB
 - NextJS on TailwindCSS
