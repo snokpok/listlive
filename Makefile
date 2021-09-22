@@ -1,4 +1,4 @@
-DO_DROPLET_IPV4 = 159.89.229.218
+DO_DROPLET_IPV4 = sikeuthought
 
 dev-up:
 	docker-compose -f docker-compose.dev.yml up -d
