@@ -1,0 +1,84 @@
+{
+  "name": "todo-list-app-frontend",
+  "description": "Frontend for a todo list app",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Vincent Vu (vinceny.fe@gmail.com)",
+  "license": "MIT",
+  "keywords": [
+    "nextjs",
+    "starter",
+    "typescript"
+  ],
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
+    "postinstall": "husky install",
+    "commit": "cz"
+  },
+  "lint-staged": {
+    "./src/**/*.{ts,js,jsx,tsx}": [
+      "yarn lint --fix",
+      "yarn format"
+    ]
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "0.3.3",
+    "@tanem/react-nprogress": "3.0.79",
+    "axios": "0.21.3",
+    "emoji-mart": "3.0.1",
+    "emoji-picker-react": "3.4.8",
+    "formik": "2.2.9",
+    "next": "11.1.0",
+    "next-cookies": "2.0.3",
+    "react": "17.0.2",
+    "react-beautiful-dnd": "13.1.0",
+    "react-dom": "17.0.2",
+    "react-hot-toast": "2.1.1",
+    "react-icons": "4.2.0",
+    "react-query": "3.21.1",
+    "react-spinners": "0.11.0",
+    "react-tiny-popover": "7.0.0",
+    "tailwindcss": "2.2.9",
+    "yup": "0.32.9",
+    "zustand": "3.5.10"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "13.1.0",
+    "@commitlint/config-conventional": "13.1.0",
+    "@types/emoji-mart": "3.0.5",
+    "@types/node": "14.17.12",
+    "@types/react": "17.0.19",
+    "@types/react-beautiful-dnd": "13.1.2",
+    "@types/react-dom": "17.0.9",
+    "@typescript-eslint/eslint-plugin": "4.29.3",
+    "@typescript-eslint/parser": "4.29.3",
+    "autoprefixer": "10.3.4",
+    "commitizen": "4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "7.32.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-next": "11.1.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-import-resolver-typescript": "2.4.0",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-prettier": "3.4.1",
+    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "husky": "7.0.2",
+    "lint-staged": "11.1.2",
+    "postcss": "8.3.6",
+    "prettier": "2.3.2",
+    "typescript": "4.4.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
