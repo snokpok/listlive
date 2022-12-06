@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function CreateListWidget() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return <div />;
 }
 
-export default CreateListWidget
+export default CreateListWidget;

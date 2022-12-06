@@ -3,11 +3,10 @@ from starlette.middleware.cors import CORSMiddleware
 from routers import user_router, list_router, auth_router
 
 app = FastAPI()
-allowed_origins = ["http://localhost:4002", "https://listlive.vuvincent.com"]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=allowed_origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

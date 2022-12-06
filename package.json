@@ -1,0 +1,20 @@
+{
+  "name": "listlive",
+  "version": "1.0.0",
+  "description": "![image](https://user-images.githubusercontent.com/64177421/134433354-2b95d52d-123b-4987-9de7-2d0d7a7a0389.png)",
+  "main": "index.js",
+  "scripts": {
+    "dev:frontend": "cd frontend && yarn dev",
+    "format": "cd frontend && yarn lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snokpok/listlive.git"
+  },
+  "author": "Vincent Vu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snokpok/listlive/issues"
+  },
+  "homepage": "https://github.com/snokpok/listlive#readme"
+}

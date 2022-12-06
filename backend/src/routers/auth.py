@@ -55,6 +55,7 @@ async def register(body: RegisterBody):
                           bcrypt.gensalt()),
             "lists": [],  # list of ids of lists
         }
+        print("hit")
         insert_res = user_col.insert_one(user)
         id, ack = insert_res.inserted_id, insert_res.acknowledged
         response = {

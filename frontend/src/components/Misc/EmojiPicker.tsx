@@ -1,14 +1,14 @@
-import React from 'react'
-import {Picker} from 'emoji-mart'
+import React from 'react';
+import { Picker } from 'emoji-mart';
 
 function EmojiPicker() {
-    const [openPicker, setEmoji] = React.useState()
+  const [openPicker, setEmoji] = React.useState();
 
-    return (
-        <div>
-            <Picker />
-        </div>
-    )
+  return (
+    <div>
+      <Picker />
+    </div>
+  );
 }
 
-export default EmojiPicker
+export default EmojiPicker;

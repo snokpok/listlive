@@ -1,3 +1,3 @@
 export const logOutHandler = () => {
-    document.cookie = 't=; path=/';
+  document.cookie = `t=; path=/`;
 };

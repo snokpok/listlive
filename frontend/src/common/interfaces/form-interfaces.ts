@@ -1,4 +1,4 @@
 export interface InputFormRaw {
-    formik: any;
-    submitButtonValue: string;
+  formik: any;
+  submitButtonValue: string;
 }
